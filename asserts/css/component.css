@@ -1,0 +1,21 @@
+.row {
+  width: 100%;
+  display: flex; }
+
+.sidebar {
+  background-color: #023683;
+  height: calc(100vh - 35px);
+  padding: 10px;
+  width: 20vw; }
+
+.sidebar ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0; }
+
+.sidebar ul li {
+  margin: 10px 0; }
+
+.footer {
+  background-color: #8e37d6;
+  text-align: center; }

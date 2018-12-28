@@ -1,0 +1,42 @@
+<%- include('./includes/head.ejs')%>
+
+<%- include('./includes/navigation.ejs')%>
+
+<span class="h-35"></span>
+<div class="main">
+  <div class="grid">
+  <% if(posts.length > 0) { %>
+
+    <% for(post of posts) { %>
+
+      <div class="post">
+        <h2 class="post__title"> <%=post.title %> </h2>
+        <img class="post__image" src="/images/PicsArt_06-12-10.16.33~01.jpg" alt="post-pic">
+        <p class="post__description"> <%=post.description %> </p>
+        <div class="post__footer">
+          <div class="post__footer__react">
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+          </div>
+          <small class="post__footer__link">
+            <a href="/post-details/<%=post._id %>">Read More...</a>
+            
+            <% if(loggedIn){ %>
+              <a class="post__footer__link--edit" href="/admin/edit-post/<%=post._id%>"><i class="fa fa-edit"></i>Edit</a>
+            <% } %>
+          </small>
+        </div>
+      </div>
+     
+    <% } %>
+
+  <% } else { %>
+  <h2>There Are No Post</h2>
+
+  <% } %>
+</div>
+</div>
+
+<%- include('./includes/footer.ejs')%>
+
+<%- include('./includes/end.ejs')%>

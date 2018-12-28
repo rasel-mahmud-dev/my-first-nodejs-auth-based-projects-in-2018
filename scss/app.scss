@@ -1,0 +1,21 @@
+
+@import './components/_footer.scss';
+@import './components/_navigation.scss';
+@import './components/_form.scss';
+@import './components/_post-details';
+@import './components/_post.scss';
+
+
+@import './pages/_dashboard.scss';
+
+@import './utils/_utils.scss';
+
+
+.body{
+  box-sizing: border-box;
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+}

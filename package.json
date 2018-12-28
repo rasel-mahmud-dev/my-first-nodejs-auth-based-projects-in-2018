@@ -1,0 +1,30 @@
+{
+  "name": "Cookie-Based-Authenticated",
+  "version": "1.0.0",
+  "description": "Dummy Cookie Based Authenticated App",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon app.js",
+    "mongodDB":"start mongod",
+    "gulp": "gulp watch",
+    "start": "concurrently \"npm run server\" \"npm run mongodDB\" \"npm run gulp\" "
+  },
+  "keywords": ["sass", "gulp", "mongoose", "express", "ejs"],
+  "author": "RaseL MAhmud",
+  "license": "none",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongoose": "5.6.7",
+    "bcryptjs": "2.4.3",
+    "moment": "2.24.0",
+    "bcrypt": "3.0.6",
+    "fontawesome-free": "5.9.0"
+  }
+}
+

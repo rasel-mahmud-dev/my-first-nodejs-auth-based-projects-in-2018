@@ -1,0 +1,10 @@
+.post_details{
+  text-align: center;
+
+  &__title{
+    color: red;
+  }
+  &__image{
+    width: 50%;
+  }
+}

@@ -1,0 +1,101 @@
+<div class="backdrop hide" id="backdrop"></div>
+<header class="header" id="header">
+  <nav class="header__navbar">
+    <div class="brand"><a class="brand__link" href="/">Aplication</a></div>
+    <ul class="header__navbar__nav">
+
+      <div class="main-nav">
+        <li class="header__navbar__nav__item">
+          <a class="link <%= path === '/' ? 'active' : null %>" href="/">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
+        </li>
+        <% if(loggedIn) { %>
+        <li class="header__navbar__nav__item">
+          <a class="link  <%= path === '/admin/dashboard' ? 'active' : null %>" href="/admin/dashboard">
+            <i class="fa fa-user-shield"></i>
+            DashBoard
+          </a>
+        </li>
+        <% } %>
+        <li class="header__navbar__nav__item">
+          <a class="link  <%= path === '/about-us' ? 'active' : null %>" href="/about-us">
+            <i class="fa fa-user-friends"></i>
+            About Us
+          </a>
+        </li>
+        <li class="header__navbar__nav__item">
+          <a class="link  <%= path === '/contact' ? 'active' : null %>" href="/contact">
+            <i class="fa fa-envelope"></i>
+            Contact
+          </a>
+        </li>
+      </div>
+
+      <!-- Notification Panel Icon -->
+      <div class="notification" id="notification">
+        <i class="fa fa-bell"></i>
+      </div>
+
+      <!-- Notification Panel -->
+      <div class="notification__panel hide" id="panel">
+        <ul class="notification__panel__items">
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <br>
+          <br>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <br>
+          <br>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+          <li>Some One Liked on Your Post</li>
+          <li>Some One Comment on Your Post</li>
+        </ul>
+      </div>
+
+      <div class="auth-nav">
+        <% if(!loggedIn) { %>
+        <a class="link <%= path === '/login' ? 'active' : null %>" href="login">
+          <i class="fa fa-sign-in-alt"></i>
+          Login
+        </a>
+        <a class="link <%= path === '/register' ? 'active' : null %>" href="/register">
+          <fa class="fa fa-user-plus"></fa>
+          Register
+        </a>
+        <% } else { %>
+
+        <div id="userIcon">
+          <div class="userIcon__logo">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="userIcon__option hide" id="userIcon__option">
+          <ul class="userIcon__option__lists">
+            <li><a href="#"><i class="fa fa-user-circle"> Profile</i></a></li>
+            <li><a href="#"><i class="fa fa-user-edit"> Edit</i></a></li>
+            <li><a href="#"><i class="fa fa-cog"> Settings</i></a></li>
+            <button class="btn btn--login btn-logout">
+              <a class="logout_button h-15" href="/logout">
+                <i class="fa fa-sign-out-alt"></i>
+                LogOut
+              </a>
+            </button>
+          </ul>
+        </div>
+        <% } %>
+      </div>
+    </ul>
+  </nav>
+</header>

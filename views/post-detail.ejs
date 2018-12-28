@@ -1,0 +1,26 @@
+<%- include('./includes/head.ejs')%>
+
+<%- include('./includes/navigation.ejs')%>
+<span class="h-35"></span>
+<div class="main">
+  <div class="post_details">
+    <h1 class="post_details__title"> <%=post.title %> </h1>
+    <img class="post_details__image" src="/images/PicsArt_06-12-10.16.33~01.jpg" alt="">
+    <p class="post_details__des"> <%= post.description %> </p>
+    <br>
+    <p> post create Date: <%=post.date %> </p>
+    <p>Creator By : <%=post.userId.username %></p>
+    <a href="/admin/deletePost/<%=post._id %>">
+      <% if(loggedIn){ %>
+      <button class="btn btn--login">Delete Post</button>
+      <% } %>
+    </a>
+    <br>
+    <br>
+
+  </div>
+
+</div>
+<%- include('./includes/footer.ejs')%>
+
+<%- include('./includes/end.ejs')%>

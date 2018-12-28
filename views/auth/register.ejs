@@ -1,0 +1,29 @@
+<%- include('../includes/head.ejs')%>
+
+  <%- include('../includes/navigation.ejs')%>
+  <span class="h-35"></span>
+  
+  <main class="main">
+    <span class="h-15"></span>
+    <form action="/register" method="POST">
+      <h3>Create Account</h3>
+      <div class="form-group">
+        <label for="">User Name</label>
+        <input type="text" name="username" id="username">
+      </div>
+      
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+
+      <button class="btn btn--register">Register</button>
+    </form>
+  </main>
+
+<%- include('../includes/end.ejs')%>
